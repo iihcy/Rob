@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>LOVE</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="rf_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>310</y>
+      <width>191</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(116, 116, 116); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Random
+Forest</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="knn_button">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>90</y>
+      <width>291</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>K-Nearest
+Neighbour</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ls_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>250</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>23</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(81, 81, 81); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>LS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="svm_button">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>160</y>
+      <width>71</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(47, 47, 47); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>S
+V
+M</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lda_button">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>0</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(124, 124, 124); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Linear
+Discriminant
+Analysis</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>250</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(81, 81, 81); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>PLS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rbm_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>160</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>33</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(143, 143, 143); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>RBM</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="feature_button">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>501</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(126, 126, 126); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Feature Extraction</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pca_button">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>90</y>
+      <width>51</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>27</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(81, 81, 81); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>P
+C
+A</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>310</y>
+      <width>271</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(62, 62, 62); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Long-Short
+Term
+Memory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>160</y>
+      <width>171</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>23</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(90, 90, 90); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Back
+Propagation
+Neural
+Networks</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>0</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(95, 95, 95); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Latent
+Dirichlet
+Allocation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dt_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>0</y>
+      <width>121</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(81, 81, 81); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Decision
+Tree</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_15">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>390</y>
+      <width>231</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(150, 150, 150); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Laplacian Eigenmaps</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>331</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>34</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(65, 65, 65); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Convolutional 
+Neural 
+Networks</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="by_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>250</y>
+      <width>101</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(81, 81, 81); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Bayesian
+Network</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_18">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>250</y>
+      <width>231</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(176, 176, 176); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Deep
+Belief
+Network</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_20">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>390</y>
+      <width>191</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文琥珀</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: rgb(65, 65, 65); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="text">
+     <string>Recurrent
+Neural
+Network</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

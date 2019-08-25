@@ -1,0 +1,2637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>DT Classifier</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Standardization</string>
+   </property>
+   <widget class="QRadioButton" name="s_radio_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Min-Max</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="s_radio_1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>z-score</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>0</y>
+     <width>401</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>DataSplit</string>
+   </property>
+   <widget class="QRadioButton" name="d_radio_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>train,test</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="d_radio_1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>89</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>train/test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="train">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="test">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="tt_box">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>7:3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9:1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8:2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6:4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5:5</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>781</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>6</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>LinearRegression</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="lr_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ordinary least squares Linear Regression&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="lr_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="lr_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="lr_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_lr_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_lr_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lr_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lr_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lr_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lr_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Ridge</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="ri_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>alpha</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="a_edit">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Linear least squares with l2 regularization&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="ri_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="ri_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="ri_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_ri_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_ri_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_ri_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_ri_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_ri_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_ri_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Lasso</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="la_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>alpha</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="la_edit">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>70</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>401</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Linear Model trained with L1 prior as regularizer (aka the Lasso)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>60</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The optimization objective for Lasso is::&lt;/p&gt;&lt;p&gt;(1 / (2 * n_samples)) * ||y - Xw||^2_2 + alpha * ||w||_1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="la_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="la_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="la_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_21">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_la_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_la_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_la_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_la_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_la_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_la_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Elastic Net</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="el_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>alpha</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="el_edit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>L1_ratio</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="el1_edit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>391</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Linear regression with combined L1 and L2 priors as regularizer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>50</y>
+        <width>271</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimizes the objective function::&lt;/p&gt;&lt;p&gt;            1 / (2 * n_samples) * ||y - Xw||^2_2 +&lt;/p&gt;&lt;p&gt;            + alpha * l1_ratio * ||w||_1&lt;/p&gt;&lt;p&gt;            + 0.5 * alpha * (1 - l1_ratio) * ||w||^2_2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="el_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="el_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="el_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_22">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_el_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_el_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_el_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_el_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_el_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_el_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Multi-task Lasso</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="mu_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>alpha</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="mu_edit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>361</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(1 / (2 * n_samples)) * ||Y - XW||^2_Fro + alpha * ||W||_21&lt;/p&gt;&lt;p&gt;Where::&lt;/p&gt;&lt;p&gt;||W||_21 = \sum_i \sqrt{\sum_j w_{ij}^2}&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>541</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Multi-task Lasso model trained with L1/L2 mixed-norm as regularizer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="mu_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="mu_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="mu_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_23">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_mu_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_mu_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_mu_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_mu_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_mu_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_mu_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Least Angle Regression</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="le_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>n_nonzero_coefs</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_edit">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>60</y>
+        <width>421</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Target number of non-zero coefficients. Use ``np.inf`` for no limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Least Angle Regression model a.k.a. LAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="le_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="le_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="le_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_24">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_le_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_le_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_le_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_le_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_le_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_le_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>LARS Lasso </string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="lar_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>alpha</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lar_edit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>70</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>70</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(1 / (2 * n_samples)) * ||y - Xw||^2_2 + alpha * ||w||_1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>341</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lasso model fit with Least Angle Regression a.k.a. Lars&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="lar_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="lar_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="lar_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_25">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_lar_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_lar_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lar_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lar_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lar_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_lar_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_8">
+    <attribute name="title">
+     <string>OMP</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_14">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>761</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Parameter</string>
+     </property>
+     <widget class="QPushButton" name="om_action">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>100</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(152, 152, 152); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>Train
+Model</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>n_nonzero_coefs</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="om_edit">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>361</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Desired number of non-zero entries in the solution.&lt;/p&gt;&lt;p&gt;If None (by default) this value is set to 10% of n_features&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Orthogonal Matching Pursuit model (OMP)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>541</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Effect Evaluation</string>
+     </property>
+     <widget class="QTableWidget" name="om_table01">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="om_table02">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="om_table03">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;测&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;试&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>31</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;训&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;练&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_26">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>150</y>
+       <width>211</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>LOVE</string>
+     </property>
+     <widget class="QPushButton" name="save_om_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>保存Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_om_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>打开Linear
+Regression模型</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_om_te">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_om_tr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集绘制图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_om_tr_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>训练集YY图</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hz_om_te_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>90</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>幼圆</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color:rgb(48, 48, 48); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color:rgb(91, 91, 136)}</string>
+      </property>
+      <property name="text">
+       <string>测试集YY图</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
